@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruti & Naman Wedding</title>
+  <meta name="description" content="Wedding weekend details for Shruti and Naman at Grand View Resort, Jamta, Himachal Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.2rem, 1.4rem + 2.7vw, 4rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem;
+      --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem;
+      --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --radius-sm: 0.5rem; --radius-md: 0.9rem; --radius-lg: 1.2rem; --radius-xl: 1.8rem;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Manrope', Arial, sans-serif;
+      --color-bg: #fff8f6;
+      --color-surface: #fffdfb;
+      --color-surface-2: #fff0eb;
+      --color-surface-3: #fff7dd;
+      --color-border: rgba(93, 43, 44, 0.12);
+      --color-text: #341d1d;
+      --color-text-muted: #7e5c5d;
+      --color-primary: #bb4f61;
+      --color-primary-deep: #8e2f44;
+      --color-primary-soft: rgba(187, 79, 97, 0.12);
+      --color-gold: #c79a28;
+      --color-gold-soft: rgba(199, 154, 40, 0.16);
+      --shadow-sm: 0 10px 30px rgba(120, 44, 59, 0.08);
+      --shadow-md: 0 18px 46px rgba(120, 44, 59, 0.14);
+      --content: 1160px;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-theme="dark"] {
+      --color-bg: #1c1114;
+      --color-surface: #25181b;
+      --color-surface-2: #2d1e22;
+      --color-surface-3: #35291f;
+      --color-border: rgba(255, 230, 230, 0.11);
+      --color-text: #f7e7e2;
+      --color-text-muted: #cfaeb0;
+      --color-primary: #ef7e93;
+      --color-primary-deep: #ffb4c0;
+      --color-primary-soft: rgba(239, 126, 147, 0.14);
+      --color-gold: #f0c661;
+      --color-gold-soft: rgba(240, 198, 97, 0.14);
+      --shadow-sm: 0 10px 30px rgba(0,0,0,0.28);
+      --shadow-md: 0 18px 46px rgba(0,0,0,0.36);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.7; color: var(--color-text); background: radial-gradient(circle at top right, rgba(199,154,40,0.14), transparent 22%), radial-gradient(circle at top left, rgba(187,79,97,0.09), transparent 24%), var(--color-bg); }
+    img { max-width: 100%; display: block; }
+    a, button { transition: all var(--transition); }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .skip-link { position: absolute; left: -999px; top: 0; background: var(--color-text); color: var(--color-bg); padding: var(--space-3) var(--space-4); }
+    .skip-link:focus { left: var(--space-4); top: var(--space-4); z-index: 1000; }
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px); background: color-mix(in srgb, var(--color-bg) 82%, transparent); border-bottom: 1px solid var(--color-border); }
+    .nav { display: flex; justify-content: space-between; gap: var(--space-4); align-items: center; padding: var(--space-3) 0; }
+    .brand { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--color-text); font-weight: 700; }
+    .brand svg { width: 38px; height: 38px; color: var(--color-primary); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--color-primary); }
+    .theme-toggle { min-width: 44px; min-height: 44px; border-radius: 999px; cursor: pointer; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); }
+    .hero { padding: clamp(4rem, 9vw, 7rem) 0 var(--space-10); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items: center; }
+    .hero-copy, .panel, .card, .event-card, .faq-item, .cta, .updates-board { background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); border-radius: var(--radius-xl); }
+    .hero-copy { padding: clamp(1.75rem, 3vw, 3rem); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.85rem; border-radius: 999px; background: var(--color-primary-soft); color: var(--color-primary); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--color-gold); }
+    h1,h2,h3 { margin: 0; line-height: 1.08; font-family: var(--font-display); }
+    h1 { font-size: var(--text-2xl); margin-top: var(--space-5); }
+    h2 { font-size: var(--text-xl); margin-top: var(--space-4); }
+    h3 { font-size: var(--text-lg); }
+    p { margin: 0; }
+    .lede { color: var(--color-text-muted); max-width: 58ch; margin-top: var(--space-5); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.9rem 1.2rem; border-radius: 999px; text-decoration: none; font-weight: 700; border: 1px solid transparent; }
+    .button.primary { background: var(--color-primary); color: white; }
+    .button.secondary { border-color: var(--color-border); color: var(--color-text); background: transparent; }
+    .button.full { width: 100%; }
+    .hero-visual { position: relative; padding: var(--space-4); background: linear-gradient(180deg, var(--color-surface-2), var(--color-surface)); border-radius: calc(var(--radius-xl) + 0.25rem); border: 1px solid var(--color-border); box-shadow: var(--shadow-md); }
+    .hero-visual img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: calc(var(--radius-xl) - 0.35rem); }
+    .floating-note { position: absolute; left: 1rem; bottom: 1rem; max-width: 260px; padding: 0.9rem 1rem; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--color-surface) 86%, white 14%); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); }
+    section { padding: var(--space-10) 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-5); margin-bottom: var(--space-6); }
+    .section-head p { max-width: 58ch; color: var(--color-text-muted); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: var(--space-5); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-4); }
+    .panel, .card, .event-card, .faq-item, .cta, .updates-board { padding: var(--space-6); }
+    .mini-title { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary); font-weight: 800; }
+    .event-time { margin-top: var(--space-2); font-weight: 800; color: var(--color-primary-deep); }
+    .theme-badge { display: inline-block; margin-top: var(--space-3); padding: 0.45rem 0.8rem; border-radius: 999px; background: var(--color-gold-soft); color: #7b5600; font-size: var(--text-xs); font-weight: 800; }
+    .list { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: grid; gap: var(--space-3); }
+    .list li { position: relative; padding-left: 1.35rem; }
+    .list li::before { content: '•'; position: absolute; left: 0; top: 0; color: var(--color-primary); font-weight: 900; }
+    .route-box { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-5); align-items: center; background: linear-gradient(135deg, var(--color-surface-2), var(--color-surface)); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--space-5); }
+    .route-box img { width: 100%; border-radius: var(--radius-lg); background: var(--color-surface-3); }
+    .stop-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--space-4); margin-top: var(--space-5); }
+    .stop { padding: var(--space-4); border-radius: var(--radius-lg); background: color-mix(in srgb, var(--color-surface-3) 76%, white 24%); border: 1px solid var(--color-border); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-4); }
+    .gallery-card { overflow: hidden; border-radius: var(--radius-xl); border: 1px solid var(--color-border); background: var(--color-surface); box-shadow: var(--shadow-sm); }
+    .gallery-card img { width: 100%; height: 100%; object-fit: cover; }
+    .span-4 { grid-column: span 4; min-height: 280px; }
+    .span-6 { grid-column: span 6; min-height: 360px; }
+    .updates-board { background: linear-gradient(180deg, color-mix(in srgb, var(--color-surface-2) 88%, white 12%), var(--color-surface)); }
+    .updates-list { display: grid; gap: var(--space-4); margin-top: var(--space-4); }
+    .update-item { padding: var(--space-4); border-radius: var(--radius-lg); border: 1px dashed var(--color-border); background: color-mix(in srgb, var(--color-surface) 78%, white 22%); }
+    footer { padding: var(--space-10) 0 var(--space-12); color: var(--color-text-muted); }
+    .footer-box { padding: var(--space-6); border-radius: var(--radius-xl); border: 1px solid var(--color-border); background: var(--color-surface); }
+    @media (max-width: 960px) {
+      .hero-grid, .grid-2, .route-box, .stop-grid, .grid-3 { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .span-4, .span-6 { grid-column: span 1; min-height: auto; }
+      .section-head, .nav { flex-direction: column; align-items: start; }
+      .floating-note { position: static; max-width: none; margin-top: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Shruti and Naman wedding home">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 18c0-4.4 3.6-8 8-8 5.2 0 8.2 3.6 10 7.2C39.8 13.6 42.8 10 48 10c4.4 0 8 3.6 8 8 0 12-18 23-18 23S20 30 20 18Z"/><path d="M10 54h44"/><path d="M20 48h24"/></svg>
+        <span>Shruti &amp; Naman</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#weekend">Weekend</a>
+        <a href="#travel">Travel</a>
+        <a href="#enroute">En route</a>
+        <a href="#gallery">Photos</a>
+        <a href="#updates">Live updates</a>
+        <a href="#rsvp">RSVP</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">☾</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <article class="hero-copy">
+          <span class="eyebrow">Wedding weekend</span>
+          <h1>Shruti &amp; Naman</h1>
+          <p class="lede">Together with Amit &amp; Sumona Dutta and Anand &amp; Malvika Saxena, invite you to celebrate a joyful wedding weekend in the hills at Grand View Resort, Jamta, Himachal Pradesh.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#weekend">View schedule</a>
+            <a class="button secondary" href="#travel">Plan travel</a>
+            <a class="button secondary" href="#gallery">See photos</a>
+          </div>
+        </article>
+        <aside class="hero-visual">
+          <img src="./assets/gallery-1.jpg" alt="Shruti and Naman together outdoors in the mountains" width="768" height="1024" loading="eager" />
+          <div class="floating-note">
+            <div class="mini-title">18–20 April</div>
+            <p><strong>All events and stay</strong> are at Grand View Resort, making the whole weekend simple and relaxed once you arrive.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="weekend">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Itinerary</span><h2>The wedding weekend</h2></div>
+          <p>A colorful daytime haldi, a glamorous sangeet, a high-energy baraat, and a sundowner varmala set the mood for the weekend.</p>
+        </div>
+        <div class="grid-2">
+          <article class="event-card"><div class="mini-title">18 April</div><h3>Phoolon Wali Haldi</h3><p class="event-time">1:00 PM</p><p>A bright afternoon celebration full of flowers, laughter, and sunshine tones.</p><span class="theme-badge">Theme: Hues of Yellow</span></article>
+          <article class="event-card"><div class="mini-title">18 April</div><h3>The Sangeet Soiree</h3><p class="event-time">7:00 PM</p><p>An evening of performances, sparkle, music, and festive glamour.</p><span class="theme-badge">Theme: Glitterati</span></article>
+          <article class="event-card"><div class="mini-title">19 April</div><h3>Baraat</h3><p class="event-time">5:00 PM</p><p>Come ready to dance, celebrate, and join the procession with full energy.</p></article>
+          <article class="event-card"><div class="mini-title">19 April</div><h3>Sundowner Varmala</h3><p class="event-time">6:00 PM</p><p>An evening varmala against the hills as the day turns golden.</p></article>
+          <article class="event-card"><div class="mini-title">20 April</div><h3>Vidaai</h3><p class="event-time">10:00 AM</p><p>A heartfelt farewell as the celebrations come to a close and a new chapter begins.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="travel">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Travel</span><h2>Getting to Jamta</h2></div>
+          <p>The Delhi bus option is the easiest choice for guests travelling with the family. Guests coming from Chandigarh can travel directly to the venue by personal car or cab.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card"><div class="mini-title">From Delhi</div><h3>Wedding buses</h3><ul class="list"><li><strong>Departure:</strong> 18 April, around 4:00 AM.</li><li><strong>Bride's side pickup:</strong> Mayur Vihar Phase 1.</li><li><strong>Groom's side pickup:</strong> Janakpuri.</li><li>Please tell us in the RSVP section if you would like to travel by the wedding bus.</li></ul></article>
+          <article class="card"><div class="mini-title">From Chandigarh</div><h3>Drive or cab</h3><ul class="list"><li>Guests travelling from Chandigarh can drive or book a cab directly to Grand View Resort.</li><li>We recommend leaving early enough for a comfortable daytime arrival.</li><li>Please save your key contact numbers before starting the hill drive.</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="enroute">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">En route</span><h2>Suggested stops on the way</h2></div>
+          <p>Adding food and break points helps guests plan better and enjoy the drive from Delhi.</p>
+        </div>
+        <div class="route-box">
+          <img src="./assets/route-illustration.jpg" alt="Illustration of a route map with travel stops" width="640" height="640" loading="lazy" />
+          <div>
+            <div class="mini-title">Drive route idea</div>
+            <h3>Delhi → Murthal → Ambala → Chandigarh bypass → Nahan/Jamta</h3>
+            <p style="margin-top: 0.75rem; color: var(--color-text-muted);">You can keep this as a friendly guide for guests and later replace it with exact map pins.</p>
+            <div class="stop-grid">
+              <div class="stop"><strong>Murthal</strong><span>Early breakfast stop for parathas and chai.</span></div>
+              <div class="stop"><strong>Ambala</strong><span>Good stretch break for fuel, coffee, or washrooms.</span></div>
+              <div class="stop"><strong>Nahan side</strong><span>Final comfort break before the last hill stretch.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Photos</span><h2>A few of our favourite moments</h2></div>
+          <p>These images add warmth to the page and make the invite feel more personal. I used a mix of scenic, playful, and candid shots from your photos.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card span-6"><img src="./assets/gallery-2.jpg" alt="Shruti and Naman by the sea during sunset" width="1152" height="768" loading="lazy" /></figure>
+          <figure class="gallery-card span-6"><img src="./assets/gallery-3.jpg" alt="Shruti and Naman walking together on the beach" width="768" height="1024" loading="lazy" /></figure>
+          <figure class="gallery-card span-4"><img src="./assets/gallery-4.jpg" alt="Hands forming a heart shape with mountains in the background" width="1080" height="1440" loading="lazy" /></figure>
+          <figure class="gallery-card span-4"><img src="./assets/gallery-5.jpg" alt="Shruti and Naman in the snow sharing a fun moment" width="768" height="1024" loading="lazy" /></figure>
+          <figure class="gallery-card span-4"><img src="./assets/gallery-6.jpg" alt="Illustrated portrait of the couple in yellow attire" width="441" height="266" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="updates">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Live updates</span><h2>For rooms, arrival notes, and last-minute info</h2></div>
+          <p>You can update room numbers, bus reporting time, venue-side contact details, or any schedule changes here.</p>
+        </div>
+        <div class="updates-board">
+          <div class="mini-title">How to use this section</div>
+          <div class="updates-list">
+            <div class="update-item"><strong>Room allocations</strong><p>Room numbers and family-wise stay details will be updated here closer to check-in.</p></div>
+            <div class="update-item"><strong>Bus reporting</strong><p>Final Delhi bus reporting time and boarding instructions will be posted here.</p></div>
+            <div class="update-item"><strong>Venue notes</strong><p>Any weather note, change in event timing, or hospitality desk contact can be updated in this section.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="container">
+        <div class="cta">
+          <span class="eyebrow">RSVP</span>
+          <h2 style="margin-top: 1rem;">Tell us if you're coming</h2>
+          <p class="lede" style="margin-top: 0.75rem;">Please share your attendance and travel preference so we can coordinate the Delhi buses comfortably.</p>
+          <div class="grid-2" style="margin-top: 1.5rem; align-items: start;">
+            <div>
+              <h3>Suggested RSVP questions</h3>
+              <ul class="list">
+                <li>Will you be attending?</li>
+                <li>How many guests will be attending?</li>
+                <li>Are you from the bride's side or groom's side?</li>
+                <li>Do you need Delhi bus travel? If yes, Mayur Vihar Phase 1 or Janakpuri?</li>
+                <li>Do you have any dietary restrictions or mobility needs?</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Use a Google Form</h3>
+              <p style="color: var(--color-text-muted); margin-bottom: 1rem;">Create a simple Google Form and replace the button below with your own RSVP link.</p>
+              <a class="button primary full" href="https://forms.google.com" target="_blank" rel="noopener noreferrer">Add your RSVP form link here</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-box">
+        <p><strong>Shruti &amp; Naman</strong></p>
+        <p>With love from the Dutta and Saxena families.</p>
+        <p>Important: keep the HTML file and the assets folder in the same parent folder, otherwise local images may not load correctly.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function(){const b=document.querySelector('[data-theme-toggle]');const r=document.documentElement;let t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';r.setAttribute('data-theme',t);const u=()=>{b.textContent=t==='dark'?'☀':'☾';};u();b.addEventListener('click',()=>{t=t==='dark'?'light':'dark';r.setAttribute('data-theme',t);u();});})();
+  </script>
+</body>
+</html>
